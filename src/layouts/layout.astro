@@ -7,7 +7,7 @@ import { ViewTransitions } from 'astro:transitions';
 import i18next, { t } from 'i18next';
 ---
 
-<html lang={i18next.language}>
+<html lang={'en'}>
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
@@ -20,7 +20,7 @@ import i18next, { t } from 'i18next';
     <meta name='viewport' content='width=device-width, initial-scale=1' />
     <meta name='generator' content={Astro.generator} />
     <meta http-equiv='Content-Language' content={i18next.language} />
-    <meta name='author' content='Roberto Ríos <roberto@rrios.dev>' />
+    <meta name='author' content='Yash Sanghavi' />
     <meta name='keywords' content='' />
     <meta name='description' content='' />
     <title>{t('titleApp')}</title>
@@ -28,6 +28,8 @@ import i18next, { t } from 'i18next';
     <HeadHrefLangs />
     <AnalyticsHead />
     <ScriptTheme />
+    <script is:inline src='/src/components/fireBaseInit.js' type='module'
+    ></script>
   </head>
 
   <body

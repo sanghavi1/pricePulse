@@ -9,8 +9,7 @@ import { defineConfig } from 'astro/config';
 import million from 'million/compiler';
 import graphqlLoader from 'vite-plugin-graphql-loader';
 
-// TODO: Replace with your own website
-const NAME_WEBSITE = 'https://rrios.dev';
+const NAME_WEBSITE = 'https://pricepulse.health';
 
 export default defineConfig({
   site: NAME_WEBSITE,
