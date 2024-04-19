@@ -1,13 +1,14 @@
 <script is:inline>
   const theme = (() => {
-    switch (true) {
-      case typeof localStorage !== 'undefined' && localStorage.getItem('theme'):
-        return localStorage.getItem('theme');
-      case window.matchMedia('(prefers-color-scheme: dark)').matches:
-        return 'dark';
-      default:
-        return 'light';
-    }
+    return 'dark';
+    // switch (true) {
+    //   case typeof localStorage !== 'undefined' && localStorage.getItem('theme'):
+    //     return localStorage.getItem('theme');
+    //   case window.matchMedia('(prefers-color-scheme: dark)').matches:
+    //     return 'dark';
+    //   default:
+    //     return 'light';
+    // }
   })();
   function setTheme() {
     theme === 'light'

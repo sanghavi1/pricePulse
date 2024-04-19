@@ -5,17 +5,17 @@ export default function navBar() {
   return (
     <Navbar>
       <NavbarBrand>
-        <p className="font-bold text-inherit">PricePulse</p>
+        <img src="pricePulseLogoV1.png" alt="PricePulse Logo" width={"128"} />
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
-            Demo
+            About Us
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Customers
+            Our Customers
           </Link>
         </NavbarItem>
       </NavbarContent>

@@ -1,6 +1,7 @@
 ---
 import Layout from '@/layouts/layout.astro';
 import NavBar from '@/components/navBar.tsx';
+import LandingHero from '@/components/LandingHero.tsx';
 import DataTable from '@/components/dataTable.tsx';
 import { changeLanguage } from 'i18next';
 
@@ -8,9 +9,53 @@ changeLanguage('en');
 ---
 
 <Layout>
-  <div class='flex flex-col justify-center p-6 gap-6 max-w-6xl'>
+  <div class='flex flex-col justify-center p-6 gap-6 max-w-screen-desktop'>
     <NavBar />
-    <h1 class='text-3xl font-bold'>About our company</h1>
+
+    <!-- HERO TITLE -->
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'stretch',
+        justifyContent: 'space-between',
+        height: '60vh',
+      }}
+    >
+      <div
+        style={{
+          display: 'flex',
+          flex: 1,
+          flexDirection: 'column',
+          justifyContent: 'center',
+        }}
+      >
+        <h1 class='text-4xl lg:text-6xl font-bold'>
+          Put a price on elective healthcare procedures.
+        </h1>
+        <br />
+        <p>
+          Just like you wouldn't buy a car, rent an apartment, or even order
+          food without knowing the cost, you shouldn't just pay for elective
+          healthcare.
+        </p>
+      </div>
+      <div class='hidden md:block' style={{ flex: 1 }}>
+        <img
+          src={'https://static.turquoise.health/static/images/new-home-bannerImage.92c4de7d77ec.png'}
+          alt='Hero background image'
+          style={{
+            objectFit: 'contain',
+            display: 'block',
+            position: 'absolute',
+            'z-index': 0,
+          }}
+        />
+      </div>
+    </div>
+
+    <h1 class='text-3xl font-bold'>Procedure Database</h1>
+    <DataTable />
+    <h1 class='text-3xl font-bold'>About Us</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue
       suscipit felis. Class aptent taciti sociosqu ad litora torquent per
@@ -26,8 +71,21 @@ changeLanguage('en');
       rhoncus massa. Vestibulum odio sapien, ultricies ut pellentesque sed,
       bibendum ac risus. Sed in congue velit. Duis non lacinia mi.
     </p>
-    <h1 class='text-3xl font-bold'>Procedure Database</h1>
-
-    <DataTable />
+    <h1 class='text-3xl font-bold'>Our Customers</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue
+      suscipit felis. Class aptent taciti sociosqu ad litora torquent per
+      conubia nostra, per inceptos himenaeos. Nunc laoreet posuere odio, in
+      placerat ex efficitur a. Pellentesque varius fringilla metus at interdum.
+      Nulla dignissim varius turpis in consectetur. Nullam ullamcorper dapibus
+      est, ac rutrum libero ornare id. Nullam sed massa et massa efficitur
+      cursus in ac nisl. Etiam malesuada facilisis tempus. Etiam sollicitudin,
+      sem at vulputate venenatis, est leo placerat arcu, vel commodo lectus mi
+      ut elit. Praesent et semper nulla, ac iaculis purus. Ut a purus enim.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia curae; Donec purus magna, porttitor ac nulla non, imperdiet
+      rhoncus massa. Vestibulum odio sapien, ultricies ut pellentesque sed,
+      bibendum ac risus. Sed in congue velit. Duis non lacinia mi.
+    </p>
   </div>
 </Layout>
