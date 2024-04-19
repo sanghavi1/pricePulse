@@ -13,8 +13,6 @@ const LandingHero: React.FC<HeroProps> = ({ backgroundImage = 'https://placehold
                 <p>
                     Just like you wouldn't buy a car, rent an apartment, or even order food without knowing the cost, you shouldn't just pay for healthcare.
                 </p>
-                <Input placeholder="Enter service name or code..." />
-                <Button>Search</Button>
             </div>
             <div style={{ flex: 1 }}>
                 <img
